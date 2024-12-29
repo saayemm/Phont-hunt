@@ -18,7 +18,7 @@ const displayPhones = phones => {
         showAllBtn.classList.add("hidden")
     }
 
-    phones = phones.slice(0,4)
+    phones = phones.slice(0,11)
 
     phones.forEach(phone=>{
     console.log(phone);
@@ -40,19 +40,31 @@ const displayPhones = phones => {
     ` 
     phoneCOntainer.appendChild(PhoneDiv)
     })
+    toggleLoadingSpinner(false)
 }
 // loadPhone()
 
 const hundleSearch = () => {
+
+    toggleLoadingSpinner(true)
+
     const field = document.getElementById("search-field")
     const fieldValue = field.value;
     console.log(fieldValue);
     loadPhone(fieldValue)
-    
 }
 
-const hundleSearch2 = () => {
-    const searchField = document.getElementById("search-field2")
-    const searchText = searchField.value;
-    loadPhone(searchText)
+// const hundleSearch2 = () => {
+//     const searchField = document.getElementById("search-field2")
+//     const searchText = searchField.value;
+//     loadPhone(searchText)
+// }
+
+const toggleLoadingSpinner = (isLoading) => {
+    const spinner = document.getElementById("loading-spiner")
+    if(isLoading){
+        spinner.classList.remove("hidden")
+    }else{
+        spinner.classList.add("hidden")
+    }
 }
