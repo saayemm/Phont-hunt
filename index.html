@@ -10,24 +10,20 @@
 </head>
 <body>
     <header>
-
+        <h2>PhoneH.</h2>
     </header>
 
     <main>
-        <div class="card card-compact bg-base-100 w-96 shadow-xl">
-            <figure>
-              <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                alt="Shoes" />
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
-              </div>
+        <section class="m-4 bg-gray-100 p-4 rounded-lg">
+            <input type="text" placeholder="Search..." class="input input-bordered w-full max-w-xs" />
+            <button onclick="hundleSearch()" class="btn btn-active btn-accent">Accent</button>
+        </section>
+
+        <section>
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 content-start">
+               
             </div>
-          </div>
+        </section>
     </main>
 
     <footer>
