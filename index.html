@@ -15,14 +15,17 @@
 
     <main>
         <section class="m-4 bg-gray-100 p-4 rounded-lg">
-            <input type="text" placeholder="Search..." class="input input-bordered w-full max-w-xs" />
-            <button onclick="hundleSearch()" class="btn btn-active btn-accent">Accent</button>
+            <input id="search-field" type="text" placeholder="Search..." class="input input-bordered w-full max-w-xs" />
+            <button onclick="hundleSearch()" class="btn btn-active btn-accent">Search</button>
         </section>
 
         <section>
             <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 content-start">
-               
             </div>
+        </section>
+
+        <section id="show-all-btn" class="hidden">
+            <button class="btn btn-secondary">Show All</button>
         </section>
     </main>
 
