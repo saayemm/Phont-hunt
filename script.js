@@ -6,7 +6,7 @@ const loadPhone = async(searchText) => {
     displayPhones(phones)
     
 }
-const displayPhones = phones => {
+const displayPhones = (phones, isShowAll) => {
 
     const phoneCOntainer = document.getElementById("phone-container")
     phoneCOntainer.textContent = ""
@@ -18,7 +18,7 @@ const displayPhones = phones => {
         showAllBtn.classList.add("hidden")
     }
 
-    phones = phones.slice(0,11)
+    phones = phones.slice(0,12)
 
     phones.forEach(phone=>{
     console.log(phone);
@@ -44,14 +44,14 @@ const displayPhones = phones => {
 }
 // loadPhone()
 
-const hundleSearch = () => {
+const hundleSearch = (isShowAll) => {
 
     toggleLoadingSpinner(true)
 
     const field = document.getElementById("search-field")
     const fieldValue = field.value;
     console.log(fieldValue);
-    loadPhone(fieldValue)
+    loadPhone(fieldValue, isShowAll)
 }
 
 // const hundleSearch2 = () => {
@@ -67,4 +67,8 @@ const toggleLoadingSpinner = (isLoading) => {
     }else{
         spinner.classList.add("hidden")
     }
+}
+
+const hundleShowAll = () => {
+    hundleSearch(true)
 }
