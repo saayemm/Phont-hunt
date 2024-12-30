@@ -12,13 +12,15 @@ const displayPhones = (phones, isShowAll) => {
     phoneCOntainer.textContent = ""
 
     const showAllBtn = document.getElementById("show-all-btn")
-    if(phones.length>10){
+    if(phones.length>10 && isShowAll){
         showAllBtn.classList.remove("hidden")
     }else{
         showAllBtn.classList.add("hidden")
     }
 
-    phones = phones.slice(0,12)
+    if(!isShowAll){
+        phones = phones.slice(0,12)
+    }
 
     phones.forEach(phone=>{
     console.log(phone);
