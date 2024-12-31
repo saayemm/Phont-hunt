@@ -32,7 +32,7 @@ const displayPhones = (phones, isShowAll) => {
                 <img src="${phone.image}"
                     alt="Shoes" class="mt-4" />
                     </figure>
-                    <div class="card-body flex flex-col justify-center items-center gap-2 p-4">
+                    <div class="card-body flex flex-col justify-center items-center gap-4 p-4">
                          <h2 class="card-title">${phone.phone_name}</h2>
                          <p>${phone.slug}</p>
                          <div class="card-actions flex w-full justify-center">
