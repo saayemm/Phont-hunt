@@ -52,9 +52,24 @@ const hundleShowDetails = async(id) => {
     // console.log("click show", id);
     const res = await fetch(`https://openapi.programming-hero.com/api/phone/${id}`)
     const data = await res.json();
-    console.log(data);
-    
-    
+    const phone = data.data;
+    showPhoneDetails(phone)
+}
+
+const showPhoneDetails = (phone) => {
+    console.log(phone);
+
+    const phoneName = document.getElementById("show-detail-phone-name")
+    phoneName.innerHTML = phone.name;
+
+    const showDetailsContainer = document.getElementById("show-detail-container");
+    showDetailsContainer.innerHTML = `
+        <img class="max-w-[220px]" src="${phone.image}" alt="Shoes" class="bg-white" />
+        <p class="text-xl"><span class="text-green-700">Stroage: </span> ${phone?.mainFeatures?.storage} </p>
+        <p class="text-xl"><span class="text-green-700">Display: </span> ${phone?.mainFeatures?.displaySize} </p>
+    `
+
+    my_modal_5.showModal()
 }
     
 const hundleSerach = (isShowAll) => {
