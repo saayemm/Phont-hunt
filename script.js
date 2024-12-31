@@ -12,6 +12,13 @@ const displayPhones = phones => {
     const phoneConatiner = document.getElementById("phone-container")
     phoneConatiner.textContent = ""
 
+    const showAllBtn = document.getElementById("show-more-btn")
+    if(phones.length>12){
+        showAllBtn.classList.remove("hidden")
+    }else{
+        showAllBtn.classList.add("hidden")
+    }
+
     phones = phones.slice(0,12)
 
     phones.forEach(phone => {
