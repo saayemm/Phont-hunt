@@ -15,10 +15,19 @@
 
    <main class="max-w-[1240px] m-auto">
 
+        <!-- Search -->
+         <section class="flex justify-end m-2 gap-2 bg-white rounded-lg p-4">
+            <input id="search-field" type="text" placeholder="Type here"
+                    class="input input-bordered input-primary w-full max-w-xs" />
+                    <button onclick="hundleSerach()" class="btn btn-primary">Search</button>
+         </section>
+
         <!-- Search result -->
-        <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <section>
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             
-        </div>
+            </div>
+        </section>
    </main>
 
    <footer>
