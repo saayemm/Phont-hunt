@@ -26,7 +26,7 @@ const displayPhones = (phones, isShowAll) => {
     console.log(phone);
 
     const PhoneDiv = document.createElement("div")
-    PhoneDiv.classList = `card card-compact bg-base-100 w-96 shadow-xl bg-white text-black`
+    PhoneDiv.classList = `card card-compact bg-base-100 p-4 shadow-xl bg-white text-black`
     PhoneDiv.innerHTML = `
             <figure>
                 <img src="${phone.image}"
@@ -36,7 +36,7 @@ const displayPhones = (phones, isShowAll) => {
                          <h2 class="card-title">${phone.phone_name}</h2>
                          <p>${phone.slug}</p>
                          <div class="card-actions flex w-full justify-center">
-                            <button class="btn btn-primary">Buy Now</button>
+                            <button class="btn btn-primary text-white">Show Details</button>
                         </div>
                     </div>
     ` 
