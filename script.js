@@ -41,16 +41,30 @@ const displayPhones = phones => {
                 </div>`
 
         phoneConatiner.appendChild(phoneCard)
+        
     });
+    toggleLoadingSpinner(false)
 }
     
 const hundleSerach = () => {
+
+    toggleLoadingSpinner(true)
+
     const searchField = document.getElementById("search-field");
     const searchVal = searchField.value;
     console.log(searchVal);
 
     loadPhone(searchVal)
     
+}
+
+const toggleLoadingSpinner = (isLoading) => {
+    const loader = document.getElementById("loading-spin")
+    if(isLoading){
+        loader.classList.remove("hidden")
+    }else{
+        loader.classList.add("hidden")
+    }
 }
 
 // loadPhone()
